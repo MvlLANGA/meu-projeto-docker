@@ -1,7 +1,12 @@
 def calcular_financiamento(valor_total, taxa_juros_anual, parcelas):
     taxa_mensal = (taxa_juros_anual / 100) / 12
-    # Fórmula de amortização (Price)
+
+    # Tratamento para juros zero (evita divisão por zero)
+    if taxa_mensal == 0:
+        return valor_total / parcelas
+
     parcela_valor = valor_total * (taxa_mensal * (1 + taxa_mensal)**parcelas) / ((1 + taxa_mensal)**parcelas - 1)
+    
     return parcela_valor
 
 if __name__ == "__main__":
