@@ -3,7 +3,7 @@ name: Publicar no DockerHub
 on:
   push:
     branches: [ "main" ]
-  push_request:
+  pull_request:
     branches: ["main"]
 
 jobs:
