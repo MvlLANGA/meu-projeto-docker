@@ -22,3 +22,4 @@ if __name__ == "__main__":
     print(f"Parcelas: {tempo} meses")
     print(f"Valor da Parcela Mensal: R$ {resultado:.2f}")
     print("----------------------------------")
+    print("Terminei meu projeto Devops!!!")
